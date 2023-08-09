@@ -14,7 +14,7 @@
 
 
 def make_exe():
-    dist = default_python_distribution(python_version="3.11")
+    dist = default_python_distribution(python_version="3.10")
 
     policy = dist.make_python_packaging_policy()
     policy.set_resource_handling_mode("files")
