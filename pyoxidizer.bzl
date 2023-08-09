@@ -26,7 +26,7 @@ def make_exe():
 
     python_config = dist.make_python_interpreter_config()
     python_config.module_search_paths = ["$ORIGIN/site-packages"]
-    python_config.run_module = "ast-tool"
+    python_config.run_module = "main"
 
     python_config.filesystem_importer = True
     python_config.oxidized_importer = False
