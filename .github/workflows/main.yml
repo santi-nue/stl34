@@ -37,6 +37,9 @@ jobs:
       - run: |
           source $VENV
           # pytest --version
+      - name: Export requirements file from lock file
+        run: |
+          poetry export -f requirements.txt --output requirements.txt          
       - name: Build the executable
         run: |
           poetry run pyoxidizer build
