@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install asterix-lib
-      - run: |
+        run: |
           pip install https://zoranbosnjak.github.io/asterix-lib-generator/lib/python/asterix-lib.tgz
           python -c "import asterix; print(asterix.manifest); print(asterix.VERSION)"
       - name: Install Poetry
