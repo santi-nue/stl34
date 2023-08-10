@@ -18,7 +18,11 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.10'
+      - name: Install asterix-lib
+      - run: |
+          pip install https://zoranbosnjak.github.io/asterix-lib-generator/lib/python/asterix-lib.tgz
+          python -c "import asterix; print(asterix.manifest); print(asterix.VERSION)"
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
@@ -35,8 +39,6 @@ jobs:
       - name: Install library
         run: poetry install --no-interaction
       - run: |
-          pip install https://zoranbosnjak.github.io/asterix-lib-generator/lib/python/asterix-lib.tgz
-          python -c "import asterix; print(asterix.manifest); print(asterix.VERSION)"
           source $VENV
           # pytest --version
       - name: Export requirements file from lock file
