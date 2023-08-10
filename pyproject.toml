@@ -6,7 +6,8 @@ authors = ["Simon Biggs <simon.biggs@radiotherapy.ai>"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = "3.11.4"
+python = "^3.10"
+https://zoranbosnjak.github.io/asterix-lib-generator/lib/python/asterix-lib.tgz
 cffi = "1.15.1"
 cryptography = "41.0.3"
 pycparser = "2.21"
