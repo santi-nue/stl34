@@ -33,7 +33,7 @@ def make_exe():
     python_config.sys_frozen = True
 
     exe = dist.to_python_executable(
-        name="enopios",
+        name="main",
         packaging_policy=policy,
         config=python_config,
     )
