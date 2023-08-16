@@ -19,7 +19,7 @@ pre-commit = "*"
 black = "22.6.0"
 
 [tool.poetry.scripts]
-ast-tool-py = "main:main"
+ast-tool-py = "src.main:main"
 
 [tool.isort]
 multi_line_output = 3
